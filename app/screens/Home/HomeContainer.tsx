@@ -90,6 +90,7 @@ export default class HomeContainer extends Component<Props, State>{
         onSeeMoreSection={this._onSeeMoreSection}
         sectionsData={sectionsData}
         genresData={genreData}
+        onSearch={() => this.props.navigation.navigate("SEARCH", { type: "audio" })}
 
         loadingCategories={loadingCategory}
         loadingFree={loadingFree}

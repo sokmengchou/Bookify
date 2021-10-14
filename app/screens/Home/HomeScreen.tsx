@@ -12,6 +12,7 @@ import Carousel from 'react-native-snap-carousel';
 import Section from 'components/Section'
 import FastImage from 'react-native-fast-image'
 import TopAudioComponent from 'components/TopAudioComponent'
+import TouchableScale from 'components/TouchableScale'
 
 
 export interface Props {
@@ -25,6 +26,7 @@ export interface Props {
   onSeeMoreSection: (type: string) => void
   sectionsData: any[]
   genresData: any[]
+  onSearch: () => void
 
   loadingNewAudio: boolean,
   loadingFeature: boolean
@@ -62,11 +64,11 @@ export default function HomeScreen(props: Props): React.ReactElement {
             <FastImage style={{ width: '100%', height: '100%' }} source={modules.LOGO_TEXT} />
           </View>
           <View style={{ flex: 1 }} />
-          <TouchableOpacity
-            onPress={() => { }}
+          <TouchableScale
+            onPress={() => props.onSearch()}
             style={styles.search}>
-            <Icon style={[styles.searchIcon, { color: 'transparent' }]} name={"search"} />
-          </TouchableOpacity>
+            <Icon style={[styles.searchIcon, { color: modules.TEXT }]} name={"search"} />
+          </TouchableScale>
         </View>
 
         {

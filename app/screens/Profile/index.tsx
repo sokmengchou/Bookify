@@ -37,7 +37,7 @@ export default class ProfileContainer extends Component<Props, State> {
   }
 
   _onFavorite = () => {
-    this.props.navigation.navigate("LIST_AUDIO", { fromProfile: true, fromProfileType: "MY_AUDIO", title: "My Audiobooks" })
+    this.props.navigation.navigate("LIST_AUDIO", { fromProfile: true, fromProfileType: "MY_AUDIO", title: "My Favorite" })
 
   }
 

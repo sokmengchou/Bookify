@@ -19,6 +19,7 @@ import HistoryContainer from "screens/History";
 import ListAudioContainer from "screens/ListAudio";
 import SectionListContainer from "screens/SectionList";
 import CalmModeContainer from "screens/ReadBook/CalmMode"
+import SearchBook from "screens/Search/SearchBook";
 const RootStack = createNativeStackNavigator()
 
 function ROOT_STACK() {
@@ -26,10 +27,11 @@ function ROOT_STACK() {
     <RootStack.Navigator screenOptions={{ headerShown: false, screenOrientation: 'portrait' }}>
       <RootStack.Screen options={{ stackAnimation: 'fade' }} name="WELCOME" component={WelcomeContainer} />
       <RootStack.Screen options={{ stackAnimation: 'fade' }} name="HOME_STACK" component={AppTab} />
-      <RootStack.Screen options={{ stackAnimation:'slide_from_bottom'  }} name="READ_BOOK" component={ReadBookContainer} />
+      <RootStack.Screen options={{ stackAnimation: 'slide_from_bottom' }} name="READ_BOOK" component={ReadBookContainer} />
       <RootStack.Screen options={{ gestureEnabled: false, stackAnimation: "flip" }} name="LIST_AUDIO" component={ListAudioContainer} />
       <RootStack.Screen options={{ gestureEnabled: false, stackAnimation: "flip" }} name="SECTION" component={SectionListContainer} />
       <RootStack.Screen options={{ gestureEnabled: false, stackAnimation: "flip" }} name="CALM_MODE" component={CalmModeContainer} />
+      <RootStack.Screen options={{ gestureEnabled: false, stackAnimation: "flip" }} name="SEARCH" component={SearchBook} />
       <RootStack.Screen name="FILL_UP_INFO" component={FillUpInformationContainer} />
       <RootStack.Screen name="EDIT_INFO" component={EditInformationContainer} />
       <RootStack.Screen name="GEO_SELECTOR" component={GeoSelectorContainer} />
